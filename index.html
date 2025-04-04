@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャッシュフロー表</title>
+    <style>
+        body {
+            font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .title-section {
+            width: 70%;
+        }
+        
+        .logo-section {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0055A7;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            color: #0055A7;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .logo-box {
+            border: 1px solid #000;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+            height: 20px;
+        }
+        
+        .left-cell {
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        .pink-bg {
+            background-color: #f8e6ff;
+        }
+        
+        .year-cell {
+            width: 50px;
+        }
+        
+        .item-cell {
+            width: 126px;
+        }
+        
+        .event-cell {
+            height: 60px;
+        }
+        
+        .footer {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title-section">
+            <h1>キャッシュフロー表を作成してみよう</h1>
+            <p>実践ごとのライフイベントや収入・支出を書き出して</p>
+            <p>今後20年間の家計の収支をチェックしましょう。</p>
+        </div>
+        <div class="logo-section">
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <div class="logo-text">日本FP協会</div>
+                <div class="logo-box">100</div>
+            </div>
+        </div>
+    </div>
+    
+    <table>
+        <tr>
+            <th class="item-cell pink-bg">年</th>
+            <!-- 20年分の列 -->
+            <th colspan="20"></th>
+        </tr>
+        <tr>
+            <td class="item-cell pink-bg">経過年数</td>
+            <!-- 20年分の列 -->
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+            <td class="year-cell"></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の年齢</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の年齢</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の年齢</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の年齢</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の年齢</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell event-cell pink-bg">ライフイベント</td>
+            <!-- 20年分の列 -->
+            <td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td>
+            <td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td>
+            <td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td>
+            <td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td><td class="event-cell"></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の収入</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">（　　　）の収入</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">一時的な収入</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">収入合計(A)</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">基本生活費</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">住居関連費</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">車両費</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">教育費</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">保険料</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">その他の支出</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">一時的な支出</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">支出合計(B)</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell">年間収支(A-B)</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td class="item-cell left-cell pink-bg">貯蓄残高</td>
+            <!-- 20年分の列 -->
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+    
+    <div class="footer">
+        ※本来、キャッシュフロー表を作成するときは物価上昇や運用利回りなどを考慮した本格的な記入しますが、ここでは記入しやすいように簡易型を作成しています。
+    </div>
+</body>
+</html>
