@@ -1,0 +1,116 @@
+name: Generate Cash Flow Table
+
+description: |
+  指定されたパラメータに基づいて、将来のキャッシュフロー表を生成するワークフロー。
+  HTML形式で出力する。
+
+inputs:
+  template_file:
+    description: キャッシュフロー表のテンプレートHTMLファイルパス。
+    type: string
+    required: true
+    default: 'index.html'
+  output_file:
+    description: 生成されるキャッシュフロー表の出力ファイルパス。
+    type: string
+    required: true
+    default: 'cashflow_output.html'
+  years_to_simulate:
+    description: シミュレーションする年数。
+    type: integer
+    required: true
+    default: 20
+  initial_savings:
+    description: 開始時点の貯蓄残高。
+    type: number
+    required: true
+  family_members:
+    description: |
+      家族構成員のリスト。各メンバーは名前と初期年齢を持つ。
+      例: [{name: '夫', initial_age: 35}, {name: '妻', initial_age: 33}]
+    type: list
+    required: true
+  income_sources:
+    description: |
+      収入源のリスト。各収入源は名前、初期年収、年次変動率（または固定額）を持つ。
+      例: [{name: '夫の収入', initial_amount: 400, annual_change_rate: 0.02}, {name: '妻の収入', initial_amount: 200, annual_change_rate: 0}]
+    type: list
+    required: true
+  recurring_expenses:
+    description: |
+      定期的な支出項目のリスト。各項目は名前、初期年額、年次変動率（または固定額）を持つ。
+      例: [{name: '基本生活費', initial_amount: 250, annual_change_rate: 0.01}, {name: '住居関連費', initial_amount: 100, annual_change_rate: 0}]
+    type: list
+    required: true
+  life_events:
+    description: |
+      ライフイベントのリスト。各イベントは名前、発生年、一時的な収入/支出額を持つ。
+      例: [{name: '長男大学入学', year: 13, temporary_expense: 200, target_member: '長男'}, {name: '住宅購入', year: 5, temporary_expense: 3000}]
+    type: list
+    required: false
+  education_expenses_model:
+    description: |
+      教育費の計算モデル。年齢や進学段階に応じた費用を設定。
+      例: { '未就学': 10, '小学生': 15, '中学生': 25, '高校生': 35, '大学生': 75 }
+    type: map
+    required: false
+
+actions:
+  - name: Initialize Workspace
+    description: 出力ファイル名でテンプレートファイルをコピーする。
+    command: cp {{ inputs.template_file }} {{ inputs.output_file }}
+
+  - name: Populate Initial Data
+    description: |
+      0年目のデータをHTMLテーブルに設定する。
+      - 各家族メンバーの初期年齢
+      - 各収入源の初期年収と収入合計(A)
+      - 各定期支出項目の初期年額と支出合計(B)
+      - 初期貯蓄残高
+    script: |
+      # PythonやJavaScript等でHTMLをパースし、初期値を書き込む想定
+      # (具体的なスクリプトは省略)
+
+  - name: Simulate Annual Changes
+    description: 指定された年数分、年次変化を計算し、HTMLテーブルに追記する。
+    loop: year from 1 to {{ inputs.years_to_simulate }}
+    steps:
+      - name: Calculate Ages
+        description: 各家族メンバーの年齢を1歳加算し、HTMLに書き込む。
+        script: # (具体的なスクリプトは省略)
+
+      - name: Calculate Income
+        description: |
+          各収入源の年収を変動率に基づいて計算し、収入合計(A)を算出してHTMLに書き込む。
+          ライフイベントによる一時的な収入も考慮する。
+        script: # (具体的なスクリプトは省略)
+
+      - name: Calculate Expenses
+        description: |
+          各定期支出項目の年額を変動率に基づいて計算する。
+          教育費モデルに基づき、子供の年齢に応じた教育費を計算する。
+          ライフイベントによる一時的な支出を考慮し、支出合計(B)を算出してHTMLに書き込む。
+        script: # (具体的なスクリプトは省略)
+
+      - name: Calculate Annual Balance
+        description: 年間収支(A-B)を計算し、HTMLに書き込む。
+        script: # (具体的なスクリプトは省略)
+
+      - name: Calculate Savings Balance
+        description: 前年の貯蓄残高に年間収支を加算して、当年の貯蓄残高を計算し、HTMLに書き込む。
+        script: # (具体的なスクリプトは省略)
+
+      - name: Populate Life Events
+        description: 当該年に発生するライフイベント名をHTMLの「ライフイベント」欄に書き込む。
+        script: # (具体的なスクリプトは省略)
+
+  - name: Finalize Output
+    description: |
+      フッター情報などを更新し、最終的なHTMLファイルを保存する。
+      （必要に応じて、グラフ描画ライブラリ等へのデータ渡しなどもここに含める）
+    script: # (具体的なスクリプトは省略)
+
+outputs:
+  cashflow_table_html:
+    description: 生成されたキャッシュフロー表のHTMLファイル。
+    value: {{ inputs.output_file }} 
